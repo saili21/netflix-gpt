@@ -4,11 +4,15 @@ import Header from "./Header";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utlis/firebase";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utlis/userSlice";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isSingIn, setIsSingIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
@@ -39,7 +43,19 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          navigate("/browse");
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL:
+              "https://lh3.googleusercontent.com/a/ACg8ocIaz3Goom9Vq2t46jAaxn6LXWD-Qrg-ER-SyXMhhC6PolAd5-tN=s576-c-no",
+          })
+            .then(() => {
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(addUser({ uid, email, displayName, photoURL }));
+              navigate("/browse");
+            })
+            .catch((error) => {
+              setErrorMessage(error.message);
+            });
           console.log(user);
         })
         .catch((error) => {

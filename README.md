@@ -13,7 +13,9 @@
 - Create Signup User Account
 - Implement Singin user api
 - Created redux store with user slice
--
+- Implemented singout
+- Update profile API call
+- Ftech movies from TMDB Movies
 
 # Features
 
