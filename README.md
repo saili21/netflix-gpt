@@ -15,7 +15,9 @@
 - Created redux store with user slice
 - Implemented singout
 - Update profile API call
-- Ftech movies from TMDB Movies
+- BugFix: Sign UP user dispalyname and profile picture
+- BugFix: if user is not logged in redirect to login and if logged in send to browser route
+- Fetch movies from TMDB Movies
 
 # Features
 
