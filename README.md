@@ -17,6 +17,8 @@
 - Update profile API call
 - BugFix: Sign UP user dispalyname and profile picture
 - BugFix: if user is not logged in redirect to login and if logged in send to browser route
+- Unsubscribed to onAuthStateChaned callback.
+- Add harcoded values to the consants file
 - Fetch movies from TMDB Movies
 
 # Features
