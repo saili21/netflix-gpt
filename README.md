@@ -20,6 +20,16 @@
 - Unsubscribed to onAuthStateChaned callback.
 - Add harcoded values to the consants file
 - Fetch movies from TMDB Movies
+- register for TMDB API and create an app and get access token.
+- Get Data from TMDB now playing movies list API
+- Custom Hook for Now Playing Movies
+- Create movieSlice
+- Update Store with movies data
+- Planning for Mian conatiner and sceondary container
+- Ftech Data for Trailer Vedio
+- Update Store with Trailer vedio data
+- Embeded Youtube vedio and make it autoplay and mute
+- tailwind classes to make main conatiner look awesome
 
 # Features
 
